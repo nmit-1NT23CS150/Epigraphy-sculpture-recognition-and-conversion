@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "allowed_dataset": "historyHulk/MoDeTrans",
+  "violations": [],
+  "locally_trained_checkpoints": [
+    {
+      "path": "outputs\\baseline_seed_2026\\best.pt",
+      "sha256": "1ae8460810816e0b555783aab1eb4dd32b2cdd94b3828fc9b041b5798256c91e"
+    },
+    {
+      "path": "outputs\\crnn_main_seed_2026\\best.pt",
+      "sha256": "48f77f1e5d2db95942f82dcbf7caae4bc2f60471494e3bdd48c564e2bc0672b7"
+    }
+  ]
+}

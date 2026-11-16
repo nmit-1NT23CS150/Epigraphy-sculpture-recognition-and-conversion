@@ -1,0 +1,100 @@
+{
+  "finalized_at_utc": "2026-08-20T16:24:50.029664+00:00",
+  "project": "From-scratch Modi manuscript line segmentation and CRNN-CTC transliteration to Devanagari",
+  "status": "complete research prototype",
+  "dataset": {
+    "dataset_id": "historyHulk/MoDeTrans",
+    "dataset_license": "MIT (as declared by the dataset card)",
+    "samples": 2043,
+    "source_group_rule": "floor((numeric_filename_id - 1) / 10)",
+    "split_seed": 2026,
+    "split_counts": {
+      "test": 240,
+      "train": 1680,
+      "validation": 123
+    },
+    "vocabulary_size_including_special_tokens": 95,
+    "target_length_min": 10,
+    "target_length_max": 452,
+    "target_length_mean": 121.40626529613314,
+    "warning": "Public metadata lacks reliable manuscript IDs; the split is block-disjoint, not proven document-disjoint."
+  },
+  "line_dataset": {
+    "parent_segments": 2043,
+    "line_samples": 6019,
+    "split_counts": {
+      "test": 787,
+      "train": 4873,
+      "validation": 359
+    },
+    "lines_per_segment_min": 1,
+    "lines_per_segment_max": 6,
+    "lines_per_segment_mean": 2.9461576113558494,
+    "ctc_characters_excluding_blank": 91,
+    "alignment_method": "automatic line detection plus width-proportional dynamic-programming word-boundary allocation",
+    "limitation": "Line targets are pseudo-aligned because MoDeTrans supplies segment-level text without line breaks."
+  },
+  "held_out_results": {
+    "whole_segment_transformer": {
+      "samples": 240,
+      "character_error_rate": 0.8793825437228016,
+      "mean_normalized_edit_similarity": 0.23405910044418002,
+      "exact_sequence_match": 0.0
+    },
+    "line_crnn_ctc": {
+      "line_level": {
+        "samples": 787,
+        "character_error_rate": 0.5592664629063628,
+        "mean_normalized_edit_similarity": 0.402545844822742,
+        "exact_sequence_match": 0.0
+      },
+      "reconstructed_segment_level": {
+        "samples": 240,
+        "character_error_rate": 0.47716013903714044,
+        "mean_normalized_edit_similarity": 0.47044672810618593,
+        "exact_sequence_match": 0.0
+      }
+    }
+  },
+  "verification": {
+    "unit_tests": "5 passed",
+    "isolation_audit": "PASS; 0 violations",
+    "web_demo_http_smoke": "HTTP 200 on localhost:8502",
+    "cross_project_exact_image_hash_matches": 0
+  },
+  "independence": {
+    "allowed_dataset": "historyHulk/MoDeTrans",
+    "pretrained_weights_loaded": false,
+    "initialization": "random",
+    "brahmi_data_or_weights_used": false,
+    "shared_data_weights_or_caches_with_journal_project": false
+  },
+  "environment": {
+    "python": "3.12.10",
+    "pytorch": "2.5.1+cu121",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "sha256": {
+    "core_files": {
+      "modi_transliterator\\line_segmentation.py": "b7e84c77aafdbd237af8d2af1952086b8acfcb1104c78a69eefc78797cc188a1",
+      "modi_transliterator\\crnn.py": "7962ed1a17c8527bb3369546eafeed59d6eefef340d3c1fd2140ad7d696de4d5",
+      "scripts\\prepare_lines.py": "b81c7ca582c654e270472ef329a9f189a4a53770c0709275024d9126b4ccf8ea",
+      "scripts\\train_crnn.py": "b2826898f08239de395b3b60454d86a79efee043385788f229fc27df79b7641b",
+      "scripts\\evaluate_crnn.py": "79c02642d601218bfcc80ba327cba3beea676fdc2d6e28c9593e8b415558daee",
+      "scripts\\infer_crnn.py": "5f25fc511689a8d6b155d7a9747c496bd514ca02f51cea55f82aff602cacad4e",
+      "streamlit_app.py": "1ceb1da549c905fd6fc4791a2000402a6a72a76f94c9cdeba4b182d5382c8cfc",
+      "data\\manifest.csv": "df6a5358ae96ee32268dbb737810bb89df20eecfd50908c18c22d3f5a77eaaff",
+      "data\\line_manifest.csv": "7ff151beb6120e780a99b1c23725b15e3dc957830ede6d1e126e97e88f4d7218"
+    },
+    "checkpoints": {
+      "outputs\\baseline_seed_2026\\best.pt": "1ae8460810816e0b555783aab1eb4dd32b2cdd94b3828fc9b041b5798256c91e",
+      "outputs\\crnn_main_seed_2026\\best.pt": "48f77f1e5d2db95942f82dcbf7caae4bc2f60471494e3bdd48c564e2bc0672b7"
+    }
+  },
+  "limitations": [
+    "Line targets are automatically pseudo-aligned because the source dataset has no line-level transcripts.",
+    "The split is block-disjoint but cannot be proven document-disjoint from public metadata.",
+    "The main comparison uses one fixed seed per architecture.",
+    "Exact held-out segment match is zero; expert review is required."
+  ]
+}

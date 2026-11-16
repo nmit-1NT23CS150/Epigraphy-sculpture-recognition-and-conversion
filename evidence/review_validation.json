@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-16",
+  "scope": "Local packaged source and Streamlit AppTest; no external host certification",
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.5.1+cu121",
+    "streamlit": "1.59.2"
+  },
+  "checks": [
+    {
+      "name": "TC01-TC05 core suite",
+      "status": "PASS",
+      "actual": ".....                                                                    [100%]\n============================== warnings summary ===============================\ntests/test_core.py::test_model_forward_and_generate\n  C:\\Users\\niran\\Desktop\\RAHAS Restoration\\.venv\\Lib\\site-packages\\torch\\nn\\modules\\transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n5 passed, 1 warning in 3.22s"
+    },
+    {
+      "name": "TC06 packaged checkpoint isolation audit",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC06 parent counts and uniqueness",
+      "status": "PASS",
+      "actual": {
+        "train": 1680,
+        "test": 240,
+        "validation": 123
+      }
+    },
+    {
+      "name": "TC06 crop split inheritance and group isolation",
+      "status": "PASS",
+      "actual": {
+        "crops": 6019,
+        "mismatches": 0,
+        "crossing_groups": 0
+      }
+    },
+    {
+      "name": "TC06 exact-image cross-split SHA256 check",
+      "status": "PASS",
+      "actual": {
+        "cross_split_duplicate_hashes": 0
+      }
+    },
+    {
+      "name": "TC07 baseline saved evaluation verified",
+      "status": "PASS",
+      "actual": {
+        "samples": 240,
+        "character_error_rate": 0.8793825437228016,
+        "mean_normalized_edit_similarity": 0.23405910044418002,
+        "exact_sequence_match": 0.0
+      }
+    },
+    {
+      "name": "TC08 full held-out CRNN evaluation reproduces metrics",
+      "status": "PASS",
+      "actual": {
+        "line_level": {
+          "samples": 787,
+          "character_error_rate": 0.5592664629063628,
+          "mean_normalized_edit_similarity": 0.402545844822742,
+          "exact_sequence_match": 0.0
+        },
+        "reconstructed_segment_level": {
+          "samples": 240,
+          "character_error_rate": 0.47716013903714044,
+          "mean_normalized_edit_similarity": 0.47044672810618593,
+          "exact_sequence_match": 0.0
+        }
+      }
+    },
+    {
+      "name": "TC10 app starts without exception",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC09-TC10 actual demo recognition and line order",
+      "status": "PASS",
+      "actual": {
+        "lines": [
+          "्वासनिधी राजमान्य राजश्री माहवराव",
+          "तप्रधान ता मोकदमवरयाज मौजे वाठा",
+          "फालहणसु इेसने सहैन मयाव"
+        ],
+        "wall_seconds": 0.4864,
+        "device": "GPU"
+      }
+    },
+    {
+      "name": "TC10 actual TXT JSON PNG downloads",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC10 changed image clears stale result",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC11 corrupt image rejected",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC11 blank image rejected",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC12 25 MiB input boundary accepted",
+      "status": "PASS",
+      "actual": null
+    },
+    {
+      "name": "TC12 25 MiB plus one byte rejected",
+      "status": "PASS",
+      "actual": null
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "checkpoint_sha256": {
+    "baseline_seed_2026": "1ae8460810816e0b555783aab1eb4dd32b2cdd94b3828fc9b041b5798256c91e",
+    "crnn_main_seed_2026": "48f77f1e5d2db95942f82dcbf7caae4bc2f60471494e3bdd48c564e2bc0672b7"
+  },
+  "external_deployment": "NOT EXECUTED: Docker unavailable; no separate host configured"
+}

@@ -1,0 +1,10 @@
+.git
+.venv*
+__pycache__
+tmp
+docs
+evidence
+data/raw
+data/lines
+outputs/baseline_seed_2026
+report_assets

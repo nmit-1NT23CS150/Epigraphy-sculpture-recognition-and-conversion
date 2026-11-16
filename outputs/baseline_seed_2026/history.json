@@ -1,0 +1,47 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 3.141188615844363,
+    "elapsed_seconds": 71.85869836807251,
+    "samples": 123,
+    "character_error_rate": 0.8504689435498142,
+    "mean_normalized_edit_similarity": 0.2215404815216045,
+    "exact_sequence_match": 0.0
+  },
+  {
+    "epoch": 2,
+    "train_loss": 2.835246976216634,
+    "elapsed_seconds": 87.6228449344635,
+    "samples": 123,
+    "character_error_rate": 1.6676694390373386,
+    "mean_normalized_edit_similarity": 0.18846466955982355,
+    "exact_sequence_match": 0.0
+  },
+  {
+    "epoch": 3,
+    "train_loss": 2.7235990166664124,
+    "elapsed_seconds": 89.15646481513977,
+    "samples": 123,
+    "character_error_rate": 1.4394797380994515,
+    "mean_normalized_edit_similarity": 0.19408292382164247,
+    "exact_sequence_match": 0.0
+  },
+  {
+    "epoch": 4,
+    "train_loss": 2.6220796556699844,
+    "elapsed_seconds": 89.68429374694824,
+    "samples": 123,
+    "character_error_rate": 1.3156963369315164,
+    "mean_normalized_edit_similarity": 0.22007462914696713,
+    "exact_sequence_match": 0.0
+  },
+  {
+    "epoch": 5,
+    "train_loss": 2.5382416168848674,
+    "elapsed_seconds": 82.85670685768127,
+    "samples": 123,
+    "character_error_rate": 0.9951336046717395,
+    "mean_normalized_edit_similarity": 0.22383765049996265,
+    "exact_sequence_match": 0.0
+  }
+]

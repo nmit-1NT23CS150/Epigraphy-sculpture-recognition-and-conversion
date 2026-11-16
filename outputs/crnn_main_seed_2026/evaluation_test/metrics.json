@@ -1,0 +1,14 @@
+{
+  "line_level": {
+    "samples": 787,
+    "character_error_rate": 0.5592664629063628,
+    "mean_normalized_edit_similarity": 0.402545844822742,
+    "exact_sequence_match": 0.0
+  },
+  "reconstructed_segment_level": {
+    "samples": 240,
+    "character_error_rate": 0.47716013903714044,
+    "mean_normalized_edit_similarity": 0.47044672810618593,
+    "exact_sequence_match": 0.0
+  }
+}

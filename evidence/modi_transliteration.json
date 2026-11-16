@@ -1,0 +1,27 @@
+{
+  "source": "Example Modi manuscript",
+  "line_count": 3,
+  "overall_confidence": 0.7809,
+  "overall_confidence_percent": 78.1,
+  "lines": [
+    {
+      "line": 1,
+      "text": "्वासनिधी राजमान्य राजश्री माहवराव",
+      "confidence": 0.8513,
+      "confidence_percent": 85.1
+    },
+    {
+      "line": 2,
+      "text": "तप्रधान ता मोकदमवरयाज मौजे वाठा",
+      "confidence": 0.7537,
+      "confidence_percent": 75.4
+    },
+    {
+      "line": 3,
+      "text": "फालहणसु इेसने सहैन मयाव",
+      "confidence": 0.7194,
+      "confidence_percent": 71.9
+    }
+  ],
+  "combined_text": "्वासनिधी राजमान्य राजश्री माहवराव\nतप्रधान ता मोकदमवरयाज मौजे वाठा\nफालहणसु इेसने सहैन मयाव"
+}

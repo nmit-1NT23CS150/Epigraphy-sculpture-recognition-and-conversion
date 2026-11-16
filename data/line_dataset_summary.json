@@ -1,0 +1,15 @@
+{
+  "parent_segments": 2043,
+  "line_samples": 6019,
+  "split_counts": {
+    "test": 787,
+    "train": 4873,
+    "validation": 359
+  },
+  "lines_per_segment_min": 1,
+  "lines_per_segment_max": 6,
+  "lines_per_segment_mean": 2.9461576113558494,
+  "ctc_characters_excluding_blank": 91,
+  "alignment_method": "automatic line detection plus width-proportional dynamic-programming word-boundary allocation",
+  "limitation": "Line targets are pseudo-aligned because MoDeTrans supplies segment-level text without line breaks."
+}

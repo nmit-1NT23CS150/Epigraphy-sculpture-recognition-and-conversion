@@ -1,0 +1,17 @@
+{
+  "dataset_id": "historyHulk/MoDeTrans",
+  "dataset_license": "MIT (as declared by the dataset card)",
+  "samples": 2043,
+  "source_group_rule": "floor((numeric_filename_id - 1) / 10)",
+  "split_seed": 2026,
+  "split_counts": {
+    "test": 240,
+    "train": 1680,
+    "validation": 123
+  },
+  "vocabulary_size_including_special_tokens": 95,
+  "target_length_min": 10,
+  "target_length_max": 452,
+  "target_length_mean": 121.40626529613314,
+  "warning": "Public metadata lacks reliable manuscript IDs; the split is block-disjoint, not proven document-disjoint."
+}
